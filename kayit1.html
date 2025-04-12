@@ -27,7 +27,7 @@
         <!-- Hesap Bölümü -->
         <div class="account">
             <button class="account-btn" onclick="window.location.href='giris.html'">Giriş Yap</button>
-            <a href="hesap.html" class="user-icon">
+            <a href="giris.html" class="user-icon">
                 <div><img src="user.png" alt=""></div>
             </a>
         </div>
@@ -105,12 +105,28 @@
             window.location.href = 'kayit2.html';
         }
 
-        // Dark mode kontrolü
+        // Dark mode kontrolü ve toggle fonksiyonu
         document.addEventListener('DOMContentLoaded', function () {
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const body = document.body;
+
+            // Sayfa yüklendiğinde dark mode durumunu kontrol et
             const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
             if (isDarkMode) {
-                document.body.classList.add('dark-mode');
+                body.classList.add('dark-mode');
             }
+
+            // Dark mode toggle butonu tıklama olayı
+            darkModeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+
+                // Dark mode durumunu localStorage'a kaydet
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                }
+            });
         });
     </script>
 </body>

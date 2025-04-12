@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - YUAME</title>
+    <title>Hizmetlerimiz - YUAME</title>
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
 </head>
 
-<body class="login-page">
+<body>
     <header class="header">
         <!-- Logo Alanı -->
         <div class="logo">
@@ -38,25 +38,37 @@
         </button>
     </header>
 
-    <div class="wrapper">
-        <form action="">
-            <h1>Giriş Yap</h1>
-            <div class="input-box">
-                <input type="text" required placeholder="Kullanıcı Adı">
+    <section class="hizmetler">
+        <h1 class="baslik">Hizmetlerimiz</h1>
+
+        <div class="hizmet-kutulari">
+            <div class="kutu">
+                <div class="ikon">📚</div>
+                <h2>Bilgi Paylaşımı</h2>
+                <p>Öğrenciler notlarını paylaşabilir, sorular sorabilir. Paylaşımlar öğretmenler tarafından
+                    onaylanır.
+                </p>
             </div>
-            <div class="input-box">
-                <input type="password" required placeholder="Şifre">
+
+            <div class="kutu">
+                <div class="ikon">🎓</div>
+                <h2>Öğretmen Desteği</h2>
+                <p>Öğretmenler özel ders verebilir, içerik onaylar ve öğrencilere rehberlik eder.</p>
             </div>
-            <div class="remember-forgot">
-                <label><input type="checkbox" style="position: relative;top: 1px;"> Beni Hatırla</label>
-                <a href="#">Şifremi Unuttum</a>
+
+            <div class="kutu">
+                <div class="ikon">💬</div>
+                <h2>Yorum Sistemi</h2>
+                <p>Yorum yaparak etkileşimde bulun, doğru cevaplara ulaş. Topluluk kurallarına dikkat edilir.</p>
             </div>
-            <button type="submit" class="btn">Giriş Yap</button>
-            <div class="register-link">
-                <p>Hesabın yok mu? <a href="kayit1.html">Hesap Oluştur</a></p>
-            </div>
-        </form>
-    </div>
+        </div>
+
+        <div class="cta">
+            <h3>Sen de katıl!</h3>
+            <a href="giris.html" class="buton">Hemen Katıl</a>
+        </div>
+    </section>
+
     <script>
         // Dark mode kontrolü ve toggle fonksiyonu
         document.addEventListener('DOMContentLoaded', function () {
